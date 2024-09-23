@@ -1,22 +1,40 @@
-import styles from './ListaDeIcons.module.css';
 import LogoPerfil from '../../assets/perfil.svg';
 import LogoSacola from '../../assets/sacola.svg';
+import styled from 'styled-components';
 
-const iconsNavBar = [ 
+const iconsNavBar = [
   {
-    src: LogoPerfil, 
+    src: LogoPerfil,
     alt: 'ícone para navegar até o meu perfil'
   },
   {
-    src: LogoSacola, 
+    src: LogoSacola,
     alt: 'ícone para navegar até a minha sacola de comprar'
   }]
 ;
 
-export default function ListaIcons (){
-    return(
-        <ul className={styles.lista}>
-          { iconsNavBar.map((link, index) => <li key={index} className={styles.lista__item}><img src={link.src} alt={link.alt}/></li>) }
-        </ul>
-    )
+const ListaEstlizada = styled.ul`
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 0;
+`
+
+const ItemDeListaEstlizado = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1em;
+`
+
+export default function ListaIcons() {
+  return (
+    <ListaEstlizada>
+      {iconsNavBar.map((link, index) => <ItemDeListaEstlizado key={index}><img src={link.src} alt={link.alt} /></ItemDeListaEstlizado>)}
+    </ListaEstlizada>
+  )
 }

@@ -1,16 +1,22 @@
+import styled from 'styled-components';
 import ListaIcons from '../ListaDeIcons';
 import ListaOpcoes from '../ListaDeOpcoes';
 import Logo from '../Logo';
-import styles from './Header.module.css';
+
+const NavContainer = styled.nav`
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+`
 
 export default function Header() {
     return (
-        <header className={styles.header}>
-            <nav className={styles.header__navBar}>
+        <header>
+            <NavContainer>
                 <Logo />
                 <ListaOpcoes />
                 <ListaIcons />
-            </nav>
+            </NavContainer>
         </header>
     )
 }
