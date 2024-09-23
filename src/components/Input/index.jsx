@@ -3,9 +3,9 @@ import styled from "styled-components"
 const InputPersonalizado = styled.input`
     border: 1px solid #FFF;
     background: transparent;
-    padding: 20px 140px;
+    padding: 20px 40px;
     border-radius: 50px;
-    width: 200px;
+    width: 300px;
     color: #FFF;
     font-size: 16px;
     margin-bottom: 10px;
@@ -16,8 +16,12 @@ const InputPersonalizado = styled.input`
     }
 `
 
-export default function Input({type, placeholder}){
+export default function Input({type, placeholder, onChange}){
     return(
-        <InputPersonalizado type={type} placeholder={placeholder}/>
+        <InputPersonalizado 
+            type={type} 
+            placeholder={placeholder} 
+            onChange={onChange} 
+        />
     )
 }
