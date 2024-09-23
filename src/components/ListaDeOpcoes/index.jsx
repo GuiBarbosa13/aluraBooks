@@ -13,7 +13,6 @@ const ItemDeListaEstilizado = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
-  list-style: none;
   height: 100%;
   cursor: pointer;
   font-size: 1em;

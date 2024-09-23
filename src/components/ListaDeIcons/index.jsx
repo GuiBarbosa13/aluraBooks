@@ -25,7 +25,6 @@ const ItemDeListaEstlizado = styled.li`
   align-items: center;
   justify-content: center;
   text-align: center;
-  list-style: none;
   height: 100%;
   cursor: pointer;
   font-size: 1em;
