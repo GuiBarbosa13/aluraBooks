@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { livrosLancamentos } from './dados';
+import livros from '../../data/livros.json';
 import Titulo from '../Titulo';
 
 const LancamentosContainer = styled.section`
@@ -15,7 +15,6 @@ const ImagensContainer = styled.div`
     gap: 48px;
     flex-wrap: wrap;
 `
-
 const LivroContainer = styled.div`
     margin-top: 30px;
     display: flex;
@@ -24,9 +23,9 @@ const LivroContainer = styled.div`
     position: relative;
     cursor: pointer;
 `
-
 const ImagemEstilizada = styled.img`
     transition: filter 0.3s ease-in-out;
+    width: 256px;
 
     &:hover{
         filter: brightness(20%);
@@ -36,7 +35,6 @@ const ImagemEstilizada = styled.img`
         display: block;
     }
 `
-
 const SubtituloEstilizado = styled.h3`
     display: none;
     position: absolute;
@@ -51,11 +49,11 @@ export default function UltimosLancamentos() {
         <LancamentosContainer>
             <Titulo cor='#EB9B00' background='#FFF'>Últimos Lançamentos</Titulo>
             <ImagensContainer>
-                {livrosLancamentos.map(
+                {livros.map(
                     livro =>
-                        <LivroContainer>
-                            <ImagemEstilizada key={livro.id} src={livro.src} alt={livro.titulo} />
-                            <SubtituloEstilizado>{livro.titulo}</SubtituloEstilizado>
+                        <LivroContainer key={livro.id}>
+                            <ImagemEstilizada  src={livro.caminhoImagemCapa} alt={livro.titulo} />
+                            <SubtituloEstilizado >{livro.titulo}</SubtituloEstilizado>
                         </LivroContainer>
                 )}
             </ImagensContainer>

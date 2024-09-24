@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "titulo": "Código Limpo",
+      "subtitulo": "Um Manual de Boa Prática para Desenvolvimento Ágil de Software",
+      "autor": "Robert C. Martin",
+      "anoDeLancamento": 2008,
+      "sinopse": "Código Limpo ensina as melhores práticas para escrever um código legível, mantível e eficiente.",
+      "caminhoImagemCapa": "https://m.media-amazon.com/images/I/41xShlnTZTL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "O Programador Pragmático",
+      "subtitulo": "Sua Jornada para a Maestria",
+      "autor": "Andrew Hunt, David Thomas",
+      "anoDeLancamento": 1999,
+      "sinopse": "O Programador Pragmático introduz práticas fundamentais que ajudam os desenvolvedores a serem mais eficazes em suas carreiras.",
+      "caminhoImagemCapa": "https://m.media-amazon.com/images/I/41as+WafrFL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Padrões de Projeto",
+      "subtitulo": "Elementos de Software Orientado a Objetos Reutilizável",
+      "autor": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+      "anoDeLancamento": 1994,
+      "sinopse": "Este livro apresenta padrões e princípios de design que ajudam a resolver problemas comuns no desenvolvimento de software.",
+      "caminhoImagemCapa": "https://m.media-amazon.com/images/I/81gtKoapHFL.jpg"
+    }
+  ]
+  

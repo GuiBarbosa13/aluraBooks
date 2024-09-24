@@ -7,7 +7,7 @@ const ContainerLogo = styled.div`
 `
 
 const ImagemEstilizada = styled.img`
-    width: 100%;
+    max-width: 10vw;
 `
 
 const ParagrafoEstilizado = styled.p`

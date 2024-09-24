@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Input from "../Input";
 import { useState } from "react";
-import { livros } from "./dadosPesquisa";
+import livros from "../../data/livros.json";
 import Titulo from "../Titulo";
 
 const FormEstilizado = styled.form`
@@ -65,7 +65,7 @@ export default function Search() {
                 {livroPesquisado.map(
                     livro => 
                     <DivLivroEstilizada>
-                        <ImagemEstilizada src={livro.src} alt={livro.titulo} key={livro.id} />
+                        <ImagemEstilizada src={livro.caminhoImagemCapa} alt={livro.titulo} key={livro.id} />
                         <p>{livro.titulo}</p>
                     </DivLivroEstilizada>
                 )}
