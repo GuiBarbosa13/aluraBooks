@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 import livros from '../../data/livros.json';
 import Titulo from '../Titulo';
+import CardRecomendados from '../CardRecomendados';
 
 const LancamentosContainer = styled.section`
     background-color: #EBECEE;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
+    gap: 32px;
+    align-items: center;
 `
 const ImagensContainer = styled.div`
     display: flex;
@@ -22,10 +25,12 @@ const LivroContainer = styled.div`
     align-items: center;
     position: relative;
     cursor: pointer;
+    width: 20%;
 `
 const ImagemEstilizada = styled.img`
     transition: filter 0.3s ease-in-out;
-    width: 256px;
+    min-width: 100%;
+    min-height: 100%;
 
     &:hover{
         filter: brightness(20%);
@@ -44,12 +49,16 @@ const SubtituloEstilizado = styled.h3`
     color: #FFF;
 `
 
+const livroRecomendado = livros[Math.floor(Math.random() * livros.length)];
+
+const ultimosLancamentos = livros.sort((a,b) => b.anoDeLancamento - a.anoDeLancamento).slice(0,3);
+
 export default function UltimosLancamentos() {
     return (
         <LancamentosContainer>
             <Titulo cor='#EB9B00' background='#FFF'>Últimos Lançamentos</Titulo>
             <ImagensContainer>
-                {livros.map(
+                {ultimosLancamentos.map(
                     livro =>
                         <LivroContainer key={livro.id}>
                             <ImagemEstilizada  src={livro.caminhoImagemCapa} alt={livro.titulo} />
@@ -57,6 +66,12 @@ export default function UltimosLancamentos() {
                         </LivroContainer>
                 )}
             </ImagensContainer>
+            <CardRecomendados
+                titulo={livroRecomendado.titulo}
+                descricao={livroRecomendado.sinopse}
+                src={livroRecomendado.caminhoImagemCapa}
+                key={livroRecomendado.id}
+            />
         </LancamentosContainer>
     )
 }
